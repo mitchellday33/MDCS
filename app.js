@@ -1,0 +1,6 @@
+const menu=document.querySelector(".menu"),nav=document.querySelector(".nav-links");
+menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.setAttribute("aria-label",open?"Close menu":"Open menu")});
+nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}));
+document.querySelectorAll("[data-plan]").forEach(link=>link.addEventListener("click",()=>{document.querySelector("#service").value="1-on-1 mentorship";document.querySelector("#goals").value=`I'm interested in the ${link.dataset.plan} plan. `}));
+document.querySelector("#inquiry-form").addEventListener("submit",event=>{event.preventDefault();const data=new FormData(event.currentTarget),subject=`MDCS coaching request — ${data.get("name")}`,body=`Name: ${data.get("name")}\nEmail: ${data.get("email")}\nAthlete age / level: ${data.get("athlete")||"Not provided"}\nService: ${data.get("service")}\n\nGoals and details:\n${data.get("goals")||"Not provided"}`;window.location.href=`mailto:mitchellday33@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`});
+document.querySelector("#year").textContent=new Date().getFullYear();
