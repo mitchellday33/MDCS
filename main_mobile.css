@@ -1,0 +1,149 @@
+@media (max-width: 820px) {
+  /* 4.0 Utilities */
+  .only-mobile{display:inline}
+  html{scroll-padding-top:74px}
+  .wrap{width:min(calc(100% - 32px),var(--max))}
+  section{padding:60px 0}
+
+  /* 4.1 Header */
+  header{background:rgba(9,7,13,.88)}
+  nav{min-height:62px;gap:12px}
+  .brand-mark{width:34px;height:34px;font-size:1.05rem}
+  .brand-name{font-size:1.08rem}
+  .brand-name small{margin-top:4px;font-size:.52rem}
+  .menu{display:grid;place-items:center;width:44px;height:44px;font-size:1.3rem;padding:0}
+  .menu:hover{border-color:var(--purple);color:#ccb0ff}
+
+  .nav-links{display:none;position:absolute;inset:62px 0 auto;flex-direction:column;align-items:stretch;gap:2px;
+    padding:14px 16px 20px;background:#0d0a11;border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .nav-links>a:not(.button){font-family:"Barlow Condensed",sans-serif;font-size:1.5rem;font-weight:800;
+    line-height:1;text-transform:uppercase;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-links .button{width:100%;min-height:50px;margin-top:16px}
+
+  /* 4.2 Hero */
+  .hero{
+    min-height:560px;
+    padding:56px 0 40px;
+    align-items:end;
+    background-image:
+      linear-gradient(180deg,rgba(9,7,13,.92) 0%,rgba(9,7,13,.42) 38%,rgba(9,7,13,.88) 78%,var(--ink) 100%),
+      url("./mdcs-ice-hero.png");
+    background-size:cover,auto 100%;
+    background-position:center,64% center;
+    background-repeat:no-repeat;
+  }
+  .hero:after{display:none}
+  h1{font-size:3.5rem;letter-spacing:-.03em;line-height:.92;text-wrap:balance}
+  .hero-lede{font-size:1rem;line-height:1.55;margin:18px 0 24px;max-width:none}
+  .eyebrow{margin-bottom:14px;font-size:.68rem}
+  .eyebrow:before{width:26px;flex:none}
+  .actions{flex-direction:column;gap:10px}
+  .actions .button{width:100%;min-height:52px}
+
+  /* 4.3 Proof strip — stays 3-up */
+  .proof-grid{grid-template-columns:repeat(3,1fr)}
+  .proof{padding:18px 12px;border-right:1px solid var(--line);border-bottom:0}
+  .proof:last-child{border-right:0}
+  .proof strong{font-size:1.25rem}
+  .proof span{display:block;margin-top:5px;font-size:.68rem;line-height:1.35}
+
+  /* 4.4 Section heads */
+  .section-head{display:block;margin-bottom:28px}
+  h2{font-size:2.9rem;letter-spacing:-.025em}
+  .section-head>p{margin-top:16px;max-width:none;font-size:.95rem;text-wrap:pretty}
+  .section-head br{display:none}
+
+  /* 4.5 Services */
+  .service-grid{grid-template-columns:1fr}
+  .service{min-height:0;padding:24px 22px;border-right:0;border-bottom:1px solid var(--line)}
+  .service:last-child{border-bottom:0}
+  .number{font-size:.7rem}
+  .service h3{margin:12px 0 8px;font-size:1.7rem}
+  .service p{font-size:.9rem;line-height:1.55;max-width:none;text-wrap:pretty}
+
+  /* 4.6 Mentorship accordion */
+  .pricing-grid{grid-template-columns:1fr;gap:10px}
+  .price-card{padding:0;transform:none}
+  .price-card.featured{transform:none;border-color:var(--purple)}
+
+  .price-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    width:100%;min-height:64px;padding:14px 20px;background:transparent;border:0;
+    color:var(--text);text-align:left;cursor:pointer}
+  .price-head:hover{background:rgba(154,92,255,.07)}
+  .price-card.featured .price-head:hover{background:rgba(154,92,255,.1)}
+  .price-head-label{display:block}
+  .price-head-value{display:flex;align-items:center;gap:12px;flex:none}
+
+  .tier{display:block;font-size:.68rem}
+  .price-card.featured .tier{color:#ccb0ff}
+  .price-sub{display:block;margin-top:4px;color:var(--muted);font-size:.78rem}
+  .price{margin:0;font-size:1.55rem}
+  .price small{font-size:.68rem}
+
+  .price-chevron{display:block;width:14px;text-align:center;color:var(--purple);
+    font-weight:800;font-size:1rem;line-height:1}
+  .price-chevron:before{content:"+"}
+  .price-head[aria-expanded="true"] .price-chevron:before{content:"−"}
+
+  .price-body{display:none;padding:0 20px 20px}
+  .price-head[aria-expanded="true"] + .price-body{display:block}
+  .price-card ul{margin:0 0 18px}
+  .price-card li{padding:9px 0 9px 24px;font-size:.9rem}
+  .price-card .button{width:100%;min-height:50px}
+
+  /* 4.7 About */
+  .about-grid{display:block}
+  .about h2{margin-bottom:20px;font-size:2.9rem}
+  .about-copy>p{font-size:1rem;margin-bottom:16px}
+  .about-copy>p:last-of-type{margin-bottom:0}
+  .timeline{margin-top:28px}
+  .timeline-item{grid-template-columns:72px 1fr;gap:14px;padding:16px 0}
+  .league{font-size:.92rem;line-height:1.2}
+  .timeline-item strong{font-size:.95rem}
+  .timeline-item span{font-size:.82rem}
+  blockquote{margin-top:28px;padding:26px;font-size:2.1rem;line-height:1.05}
+  blockquote small{margin-top:20px;font-size:.8rem}
+
+  /* 4.8 Contact */
+  .contact-grid{display:block}
+  .contact:before{right:-18px;top:-28px;font-size:8rem}
+  .contact-copy>p{max-width:none;font-size:.95rem}
+  .contact-direct{display:grid;gap:8px;margin:24px 0 28px}
+  .contact-direct a{display:flex;align-items:center;width:auto;min-height:52px;padding:0 16px;
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+    font-weight:700;font-size:.95rem;text-decoration:none}
+  .contact-direct a:hover{background:rgba(255,255,255,.2)}
+  form{padding:24px}
+  .field-row{display:block}
+  .field{margin-bottom:14px}
+  #athlete,label[for="athlete"]{display:none}
+  .field:has(#athlete){display:none}
+  input,select,textarea{min-height:50px}
+  textarea{min-height:110px}
+  label{font-size:.78rem}
+  form .button{min-height:52px}
+  .form-note{font-size:.72rem}
+
+  /* 4.9 Footer + sticky bar */
+  footer{padding:28px 0 96px}
+  .footer-row{flex-direction:column;gap:8px;font-size:.76rem}
+
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:45;
+    display:flex;align-items:center;gap:10px;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(13,10,17,.94);backdrop-filter:blur(16px);
+    border-top:1px solid var(--line);
+    transform:translateY(110%);transition:transform .25s ease;
+  }
+  .mobile-bar.show{transform:translateY(0)}
+  .mobile-bar-call{display:grid;place-items:center;width:52px;height:52px;flex:none;
+    border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none}
+  .mobile-bar-call:hover{border-color:var(--purple);color:#ccb0ff}
+  .mobile-bar-cta{flex:1;min-height:52px}
+  .mobile-bar-cta:hover{transform:none}
+}
+
+@media (min-width: 821px){ .mobile-bar{display:none} }

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2309070d'/%3E%3Cpath d='M12 46V18h9l11 15 11-15h9v28h-9V31L32 45 21 31v15z' fill='%239a5cff'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./main_mobile.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +35,7 @@
         <div class="proof"><strong>NCDC</strong><span>New Hampshire Jr. Monarchs</span></div>
       </div></div>
       <section id="services"><div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">What we work on</p><h2>Coaching built<br />around you.</h2></div><p>Every athlete needs something different. MDCS connects the mental, physical, technical, and tactical sides of performance into one development plan.</p></div>
+        <div class="section-head"><div><p class="eyebrow">What we work on</p><h2>Coaching built <br />around you.</h2></div><p>Every athlete needs something different. MDCS connects the mental, physical, technical, and tactical sides of performance into one development plan.</p></div>
         <div class="service-grid">
           <article class="service"><span class="number">01 / MENTORSHIP</span><h3>1-on-1 mentorship</h3><p>Confidence, mental performance, goal setting, accountability, and honest guidance for players navigating youth, junior, and college hockey.</p></article>
           <article class="service"><span class="number">02 / OFF-ICE</span><h3>Athletic development</h3><p>In-person and online programming for mobility, strength, conditioning, and position-specific movement—built around your season and goals.</p></article>
@@ -56,11 +57,56 @@
         </div>
       </div></section>
       <section id="mentorship"><div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">Ongoing support</p><h2>Mentorship<br />options.</h2></div><p>Choose the level of contact and accountability that fits where you are right now. Each option is centered on your development on and off the ice.</p></div>
+        <div class="section-head"><div><p class="eyebrow">Ongoing support</p><h2>Mentorship <br />options.</h2></div><p>Choose the level of contact and accountability that fits where you are right now. Each option is centered on your development on and off the ice.</p></div>
         <div class="pricing-grid">
-          <article class="price-card"><span class="tier">Bronze</span><div class="price">$50 <small>/ month</small></div><ul><li>One mentorship call each month</li><li>Goal and progress check-in</li><li>Focused next steps</li></ul><a class="button secondary" href="#contact" data-plan="Bronze mentorship">Choose Bronze</a></article>
-          <article class="price-card featured"><span class="tier">Silver · Development plan</span><div class="price">$150 <small>/ month</small></div><ul><li>Two mentorship calls each month</li><li>Personal development plan</li><li>Email support and follow-up</li></ul><a class="button" href="#contact" data-plan="Silver mentorship">Choose Silver</a></article>
-          <article class="price-card"><span class="tier">Gold</span><div class="price">$250 <small>/ month</small></div><ul><li>Weekly mentorship calls</li><li>Consistent accountability</li><li>Direct text support</li></ul><a class="button secondary" href="#contact" data-plan="Gold mentorship">Choose Gold</a></article>
+          <article class="price-card">
+            <button class="price-head" type="button" aria-expanded="false" aria-controls="plan-bronze">
+              <span class="price-head-label">
+                <span class="tier">Bronze</span>
+                <span class="price-sub">Monthly check-in</span>
+              </span>
+              <span class="price-head-value">
+                <span class="price">$50 <small>/ month</small></span>
+                <span class="price-chevron" aria-hidden="true"></span>
+              </span>
+            </button>
+            <div class="price-body" id="plan-bronze">
+              <ul><li>One mentorship call each month</li><li>Goal and progress check-in</li><li>Focused next steps</li></ul>
+              <a class="button secondary" href="#contact" data-plan="Bronze mentorship">Choose Bronze</a>
+            </div>
+          </article>
+          <article class="price-card featured">
+            <button class="price-head" type="button" aria-expanded="false" aria-controls="plan-silver">
+              <span class="price-head-label">
+                <span class="tier">Silver · Development plan</span>
+                <span class="price-sub">Development plan</span>
+              </span>
+              <span class="price-head-value">
+                <span class="price">$150 <small>/ month</small></span>
+                <span class="price-chevron" aria-hidden="true"></span>
+              </span>
+            </button>
+            <div class="price-body" id="plan-silver">
+              <ul><li>Two mentorship calls each month</li><li>Personal development plan</li><li>Email support and follow-up</li></ul>
+              <a class="button" href="#contact" data-plan="Silver mentorship">Choose Silver</a>
+            </div>
+          </article>
+          <article class="price-card">
+            <button class="price-head" type="button" aria-expanded="false" aria-controls="plan-gold">
+              <span class="price-head-label">
+                <span class="tier">Gold</span>
+                <span class="price-sub">Weekly contact</span>
+              </span>
+              <span class="price-head-value">
+                <span class="price">$250 <small>/ month</small></span>
+                <span class="price-chevron" aria-hidden="true"></span>
+              </span>
+            </button>
+            <div class="price-body" id="plan-gold">
+              <ul><li>Weekly mentorship calls</li><li>Consistent accountability</li><li>Direct text support</li></ul>
+              <a class="button secondary" href="#contact" data-plan="Gold mentorship">Choose Gold</a>
+            </div>
+          </article>
         </div>
       </div></section>
       <section class="contact" id="contact"><div class="wrap contact-grid">
@@ -70,12 +116,18 @@
         <form id="inquiry-form">
           <div class="field-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required /></div><div class="field"><label for="athlete">Athlete age / level</label><input id="athlete" name="athlete" placeholder="Example: 16U AAA" /></div></div>
           <div class="field-row"><div class="field"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required /></div><div class="field"><label for="service">Interested in</label><select id="service" name="service"><option>1-on-1 mentorship</option><option>Off-ice training</option><option>On-ice goalie training</option><option>Video breakdown</option><option>Not sure yet</option></select></div></div>
-          <div class="field"><label for="goals">What are you working toward?</label><textarea id="goals" name="goals" placeholder="Share your goals, current challenges, location, and the best way to reach you."></textarea></div>
+          <div class="field"><label for="goals">What are you working toward?<span class="only-mobile"> (include age &amp; level)</span></label><textarea id="goals" name="goals" placeholder="Share your goals, current challenges, location, and the best way to reach you." data-mobile-placeholder="Example: 16U AAA — want to cut down rebounds and build a summer plan."></textarea></div>
           <button class="button" type="submit">Send coaching request</button><p class="form-note">Submitting opens your email app with the request ready to send.</p>
         </form>
       </div></section>
     </main>
     <footer><div class="wrap footer-row"><span>© <span id="year"></span> Mitch Day Coaching Services LLC</span><span><a href="mailto:mitchellday33@gmail.com">Contact Mitchell</a> · St. Louis roots, athlete-first coaching</span></div></footer>
+    <div class="mobile-bar" id="mobile-bar" aria-hidden="true">
+      <a class="mobile-bar-call" href="tel:+13146816680" aria-label="Call Mitchell Day" tabindex="-1">
+        <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M222.37 158.46l-47.11-21.11-.13-.06a16 16 0 00-15.17 1.4 8.12 8.12 0 00-.75.56L134.87 160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 001.32-15.06v-.12L97.54 33.64a16 16 0 00-16.62-9.52A56.26 56.26 0 0032 80c0 79.4 64.6 144 144 144a56.26 56.26 0 0055.88-48.92 16 16 0 00-9.51-16.62z"/></svg>
+      </a>
+      <a class="button mobile-bar-cta" href="#contact" tabindex="-1">Request coaching</a>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
